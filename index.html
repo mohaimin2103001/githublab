@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Basic Page</title>
+  <meta name="description" content="A very simple starter HTML + CSS page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Welcome</h1>
+      <nav class="nav">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <h2>Basic HTML & CSS Starter</h2>
+      <p>This is a minimal template to get you going quickly.</p>
+      <button class="btn">Primary Action</button>
+    </section>
+
+    <section id="about" class="cards">
+      <article class="card">
+        <h3>Fast</h3>
+        <p>Just the essentials to start building.</p>
+      </article>
+      <article class="card">
+        <h3>Clean</h3>
+        <p>Readable structure with semantic tags.</p>
+      </article>
+      <article class="card">
+        <h3>Responsive</h3>
+        <p>Looks good on mobile and desktop.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in touch</h2>
+      <form class="form" onsubmit="event.preventDefault(); alert('Form submitted!');">
+        <label>
+          <span>Name</span>
+          <input type="text" placeholder="Your name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea placeholder="Say hello..." rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> My Basic Page</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
