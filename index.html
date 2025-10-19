@@ -47,20 +47,30 @@
 
     <section id="contact" class="contact">
       <h2>Get in touch</h2>
-      <form class="form" onsubmit="event.preventDefault(); alert('Form submitted!');">
+      <p class="contact-intro">We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+      <form class="form" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.');">
+        <div class="form-row">
+          <label>
+            <span>Name *</span>
+            <input type="text" placeholder="Your full name" required minlength="2" />
+          </label>
+          <label>
+            <span>Email *</span>
+            <input type="email" placeholder="you@example.com" required />
+          </label>
+        </div>
         <label>
-          <span>Name</span>
-          <input type="text" placeholder="Your name" required />
+          <span>Subject</span>
+          <input type="text" placeholder="What's this about?" />
         </label>
         <label>
-          <span>Email</span>
-          <input type="email" placeholder="you@example.com" required />
+          <span>Message *</span>
+          <textarea placeholder="Tell us more about your inquiry..." rows="5" required minlength="10"></textarea>
         </label>
-        <label>
-          <span>Message</span>
-          <textarea placeholder="Say hello..." rows="4"></textarea>
-        </label>
-        <button type="submit" class="btn">Send</button>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="reset" class="btn btn-secondary">Clear Form</button>
+        </div>
       </form>
     </section>
   </main>

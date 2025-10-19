@@ -81,18 +81,49 @@ body {
 .card p { color: var(--muted); }
 
 .contact { padding: 2rem 0 3rem; }
+.contact-intro {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
 .form {
   display: grid;
-  gap: .75rem;
-  max-width: 520px;
+  gap: 1rem;
+  max-width: 600px;
 }
-.form label { display: grid; gap: .25rem; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form label { display: grid; gap: .4rem; }
+.form label span { font-weight: 600; color: var(--text); }
 .form input, .form textarea {
   font: inherit;
-  padding: .6rem .75rem;
+  padding: .75rem 1rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.form input:focus, .form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.form-actions {
+  display: flex;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background: var(--border);
+  color: var(--text);
 }
 
 .site-footer {
